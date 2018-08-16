@@ -1,0 +1,15 @@
+<?php
+
+use Illuminate\Database\Seeder;
+use App\Models\{{model}};
+
+class {{model}}TableSeeder extends Seeder {
+
+    public function run() {
+        {{model}}::truncate();
+        {{model}}::create(array(
+            "uuid" => '{{uuid}}',
+
+        ));
+    }
+} 

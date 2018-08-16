@@ -1,0 +1,17 @@
+<?php
+
+class {{class}} extends TableMigration {
+
+    protected $table = '{{table}}';
+
+    public function create() {
+        Schema::create($this->table, function ($table) {
+            $table->increments('id');
+            $table->string('uuid', 64)->unique();
+            $table->timestamps();
+
+            $table->engine = 'InnoDB';
+        });
+    }
+
+}
